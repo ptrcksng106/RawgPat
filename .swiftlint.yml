@@ -1,0 +1,7 @@
+disabled_rules :
+- line_length
+- redundant_void_return
+- class_delegate_protocol
+- unneeded_break_in_switch
+- unused_optional_binding
+- void_return
