@@ -13,6 +13,9 @@
 		F75152D12A9763CD00F532EC /* GameDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75152D02A9763CD00F532EC /* GameDetailModel.swift */; };
 		F75152DA2A97B4EA00F532EC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75152D82A97B4EA00F532EC /* DetailViewController.swift */; };
 		F75152DB2A97B4EA00F532EC /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F75152D92A97B4EA00F532EC /* DetailViewController.xib */; };
+		F7601D352A9E29A100E177B4 /* RAWG-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F7601D342A9E29A100E177B4 /* RAWG-Info.plist */; };
+		F7601D5E2AA1897D00E177B4 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7601D5C2AA1897D00E177B4 /* FavoriteViewController.swift */; };
+		F7601D5F2AA1897D00E177B4 /* FavoriteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7601D5D2AA1897D00E177B4 /* FavoriteViewController.xib */; };
 		F778FC6F2A93BF1800F0A620 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FC6E2A93BF1800F0A620 /* TabBarController.swift */; };
 		F778FC722A93BF5D00F0A620 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F778FC702A93BF5D00F0A620 /* ProfileViewController.swift */; };
 		F778FC732A93BF5D00F0A620 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F778FC712A93BF5D00F0A620 /* ProfileViewController.xib */; };
@@ -38,6 +41,9 @@
 		F75152D02A9763CD00F532EC /* GameDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailModel.swift; sourceTree = "<group>"; };
 		F75152D82A97B4EA00F532EC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F75152D92A97B4EA00F532EC /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F7601D342A9E29A100E177B4 /* RAWG-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RAWG-Info.plist"; sourceTree = "<group>"; };
+		F7601D5C2AA1897D00E177B4 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		F7601D5D2AA1897D00E177B4 /* FavoriteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteViewController.xib; sourceTree = "<group>"; };
 		F778FC6E2A93BF1800F0A620 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F778FC702A93BF5D00F0A620 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F778FC712A93BF5D00F0A620 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
@@ -79,14 +85,23 @@
 			path = Detail;
 			sourceTree = "<group>";
 		};
-		F778FC782A93DB6B00F0A620 /* Model */ = {
+		F7601D602AA1898200E177B4 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				F7601D5C2AA1897D00E177B4 /* FavoriteViewController.swift */,
+				F7601D5D2AA1897D00E177B4 /* FavoriteViewController.xib */,
+			);
+			path = Favorite;
+			sourceTree = "<group>";
+		};
+		F778FC782A93DB6B00F0A620 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F778FC792A93DCBE00F0A620 /* GameModel.swift */,
 				F72458742A9484D800B2E9CA /* GameResponses.swift */,
 				F75152D02A9763CD00F532EC /* GameDetailModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F778FC7F2A947D4A00F0A620 /* SignIn */ = {
@@ -146,13 +161,14 @@
 		F7F48E052A8FE071001D1656 /* RawgPat */ = {
 			isa = PBXGroup;
 			children = (
+				F7601D342A9E29A100E177B4 /* RAWG-Info.plist */,
 				F7F48E142A8FE072001D1656 /* Info.plist */,
 				F7F48E242A8FEA5B001D1656 /* RawgPat.entitlements */,
 				F7F48E0F2A8FE072001D1656 /* Assets.xcassets */,
-				F778FC782A93DB6B00F0A620 /* Model */,
+				F7F48E1B2A8FE0F4001D1656 /* Views */,
+				F778FC782A93DB6B00F0A620 /* Models */,
 				F7F48E252A8FFC95001D1656 /* Helper */,
 				F7F48E1C2A8FE0FE001D1656 /* NetworkSource */,
-				F7F48E1B2A8FE0F4001D1656 /* View */,
 				F7F48E1A2A8FE0CA001D1656 /* App */,
 			);
 			path = RawgPat;
@@ -168,15 +184,16 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		F7F48E1B2A8FE0F4001D1656 /* View */ = {
+		F7F48E1B2A8FE0F4001D1656 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F778FC6E2A93BF1800F0A620 /* TabBarController.swift */,
+				F7601D602AA1898200E177B4 /* Favorite */,
 				F778FC822A947D6E00F0A620 /* Main */,
 				F778FC802A947D5600F0A620 /* Profile */,
 				F778FC7F2A947D4A00F0A620 /* SignIn */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F7F48E1C2A8FE0FE001D1656 /* NetworkSource */ = {
@@ -259,10 +276,12 @@
 				F7F48E132A8FE072001D1656 /* LaunchScreen.storyboard in Resources */,
 				F7F48E222A8FE8ED001D1656 /* SignInViewController.xib in Resources */,
 				F75152DB2A97B4EA00F532EC /* DetailViewController.xib in Resources */,
+				F7601D352A9E29A100E177B4 /* RAWG-Info.plist in Resources */,
 				F778FC7E2A93DD3800F0A620 /* MainViewController.xib in Resources */,
 				F778FC732A93BF5D00F0A620 /* ProfileViewController.xib in Resources */,
 				F7F48E102A8FE072001D1656 /* Assets.xcassets in Resources */,
 				F778FC872A947DA500F0A620 /* GameTableViewCell.xib in Resources */,
+				F7601D5F2AA1897D00E177B4 /* FavoriteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +318,7 @@
 				F7F48E292A8FFCCC001D1656 /* SignInWithAppleManager.swift in Sources */,
 				F7F48E272A8FFCAB001D1656 /* AuthState.swift in Sources */,
 				F778FC6F2A93BF1800F0A620 /* TabBarController.swift in Sources */,
+				F7601D5E2AA1897D00E177B4 /* FavoriteViewController.swift in Sources */,
 				F778FC862A947DA500F0A620 /* GameTableViewCell.swift in Sources */,
 				F7F48E072A8FE071001D1656 /* AppDelegate.swift in Sources */,
 				F778FC722A93BF5D00F0A620 /* ProfileViewController.swift in Sources */,

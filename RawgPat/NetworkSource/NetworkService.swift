@@ -8,7 +8,22 @@
 import UIKit
 
 class NetworkService {
-    let apiKey = "02b6331c94884114a2f0e09524f577c7"
+    private var apiKey: String {
+        get {
+            guard let filePath = Bundle.main.path(forResource: "RAWG-Info", ofType: "plist") else {
+                fatalError("Couldn't find file 'RAWG-Info.plist'.")
+            }
+            let plist = NSDictionary(contentsOfFile: filePath)
+            guard let value = plist?.object(forKey: "API_KEY") as? String else {
+                fatalError("Couldn't find key 'API_KEY' in 'RAWG-Info.plist'.")
+            }
+            if value.starts(with: "_") {
+                fatalError("Register for a RAWG developer account and get an API key at https://api.rawg.io/docs/")
+            }
+            return value
+        }
+    }
+    
     func getListGames() async throws -> [GameModel] {
         var components = URLComponents(string: "https://api.rawg.io/api/games")!
         components.queryItems = [

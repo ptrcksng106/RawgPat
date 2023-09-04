@@ -5,7 +5,6 @@
 //  Created by Patrick Samuel Owen Saritua Sinaga on 24/08/23.
 //
 
-import Foundation
 import UIKit
 
 class GameDetailModel {
